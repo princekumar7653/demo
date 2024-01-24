@@ -1,4 +1,4 @@
-console.log("prince")
+console.log("prince singh bhumihar")
 
 
 let n = 100
