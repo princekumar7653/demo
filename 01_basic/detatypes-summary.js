@@ -39,3 +39,30 @@ const myFunction = function(){
 
 console.log(typeof scoreValue);
 
+
+ // ++++++++++++++++++++++++++++++++++++++++++++++++++ memroy ++++++++++++++++++++++++++++++++++++++++=
+
+
+ // stack (primitive),  heap (non-primitive)
+
+
+  let myYouTubeName = "princesinghdotcom"
+
+  let anotherName = myYouTubeName 
+
+  anotherName = "chaiaurcode" 
+
+  console.log(myYouTubeName);
+  console.log(anotherName);
+
+  let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+  }
+
+  let userTwo = userOne 
+
+  userTwo.email = "prince@facebook.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
