@@ -66,6 +66,37 @@ console.log(users[1].id)
 
 console.log(finderUser.hasOwnProperty('isLogged'));
 
+const course = {
+    courseName: "js in hindi",
+    price: "999",
+    courseInstructor: "prince"
+
+}
+
+// course.courseInstructor
+
+const {courseInstructor: instructor} = course
+
+//console.log(courseInstructor);
+
+console.log(instructor);
+
+// json
+
+// {
+//     "name": "prince",
+//     "coursename":, "js in hindi",
+//     "price": "free"    
+// }
+
+[
+    {},
+    {},
+    {}
+]
+
+
+
 
 
 
