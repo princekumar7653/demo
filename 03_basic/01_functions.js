@@ -37,4 +37,37 @@ function loginUserMassage(username = "sonu"){
 
 //console.log(loginUserMassage("prince"));
 
-console.log(loginUserMassage("prince"));
+//console.log(loginUserMassage("prince"));
+
+
+function calculateCartPrice(val1, val2, ...num1){
+    return num1
+}
+
+console.log(calculateCartPrice(200, 300, 400, 500));
+
+
+const user = {
+    username: "prince",
+    price: 500
+}
+
+function handleObject(anyObject){
+    console.log(`usernmae is ${anyObject.username} and price ${anyObject.price}`);
+}
+
+//handleObject(user)
+handleObject({
+    username: "nitish",
+    price: 200
+})
+
+
+const newArray = [234, 543, 765, 659]
+
+function returnThirdValue(getArray){
+    return getArray[2]
+}
+
+//console.log(returnThirdValue(newArray));
+console.log(returnThirdValue([200, 400, 600, 700]));
