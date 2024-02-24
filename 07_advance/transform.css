@@ -1,0 +1,32 @@
+div{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(23, 103, 173);
+    border: 2px solid white;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    /* transform: rotate(45deg); */
+    /* rotate: x 180deg; */
+    /* transform: scale(1, 3); */
+    transition: all 2s ease-in;
+    
+}
+
+div:hover{
+    /* background-color: blueviolet;
+    color: white;
+    font-size: 20px; */
+    /* transform: scale(2); */
+    /* transform: rotate(180deg); */
+    /* transform: translatex(300px); */
+    /* transform: translatey(300px); */
+    /* transform: translate(100px, 80px);  */
+    transform: translatex(-300px);
+
+}
+
+div:active{
+    background-color: blue;
+    color: brown;
+}
