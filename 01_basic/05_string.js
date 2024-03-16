@@ -8,7 +8,7 @@ console.log(`hello my name is ${name} and my repo count is ${repoCount}`);
 
 const gameName = new String('prince-hc')
 
-console.log(gameName[2]);
+console.log(gameName[5]);
 console.log(gameName.__proto__);
 
 console.log(gameName.length);
