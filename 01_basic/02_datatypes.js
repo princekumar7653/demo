@@ -7,7 +7,7 @@ console.log(3 +7); // code redability should be high
 
 console.log("prince")
 
-let name = "ritesh"
+let name = "prince"
 let age = 18
 
 let isLoggedIn = false
