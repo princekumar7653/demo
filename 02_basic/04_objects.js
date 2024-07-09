@@ -36,7 +36,7 @@ const obj3 = {...obj1, ...obj2, ...obj4}
 
 
 
-//console.log(obj3);
+console.log(obj3);
 
 
 const users = [
@@ -66,12 +66,16 @@ console.log(users[1].id)
 
 console.log(finderUser.hasOwnProperty('isLogged'));
 
+// destructure object
+
 const course = {
     courseName: "js in hindi",
     price: "999",
     courseInstructor: "prince"
 
 }
+
+
 
 // course.courseInstructor
 
@@ -88,7 +92,7 @@ console.log(instructor);
 //     "coursename":, "js in hindi",
 //     "price": "free"    
 // }
-
+ 
 [
     {},
     {},
