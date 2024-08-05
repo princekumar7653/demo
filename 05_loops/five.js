@@ -35,8 +35,8 @@ const myObject = [
     },
 ]
 
-myObject.forEach( (item) => {
-    console.log(item.languageFileName);
+myObject.filter( (item) => {
+    console.log(item.languageName .languageFileName);
 } );
 
 

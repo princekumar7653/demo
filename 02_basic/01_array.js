@@ -38,5 +38,58 @@ console.log("C", myArr);
 console.log(nyn2);
 
 
+let foodItems = ["potato", "apple", "litchi", "tomato"];
+
+console.log(foodItems);
+console.log(foodItems.toString());
+
+// foodItems.push("chips", "burger", "paneer");
+
+// console.log(foodItems);
+
+// let numList = [1, 2, 3, 4, 5];
+
+// // numList.push(6,7,8)
+// let deletedItem = numList.pop()
+
+// console.log(numList);
+
+// console.log(deletedItem);
+
+let marks = [98, 67, 76, 54, 34];
+
+console.log(marks);
+console.log(marks.toString());
+
+// let marvelHeroes = ["thor", "spiderman", "ironman"];
+// let dcHeroes = ["superman", "batman"];
+// let indian = ["shaktiman", "krish"]
+
+// let heroes = marvelHeroes.concat(dcHeroes, indian);
+// console.log(heroes);
+
+
+let marvelHeroes = ["thor", "ironman", "spiderman"]
+
+marvelHeroes.unshift("deta") // aage se add karta hai array me
+marvelHeroes.shift() // aage se delete karta hai first element ko array me
+console.log(marvelHeroes);
+
+
+let hitHeroes = ["thor", "apiderman", "ironman", "krish", "shaktiman"]
+
+console.log(hitHeroes);
+console.log(hitHeroes.slice(1, 2));
+
+let arr = [1, 2, 3, 4, 5, 6]
+
+console.log(arr);
+
+console.log(arr.splice(2, 2, 100, 102));
+
+// Add Element
+
+console.log(arr.splice());
+
 
 

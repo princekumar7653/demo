@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    const requesUrl = "https://api.github.com/users/princekumar7653";
+    const xhr = new XMLHttpRequest();
+    xhr.open("Get", requesUrl);
+
+    xhr.onreadystatechange = function () {
+      console.log(xhr.readyState);
+      if (xhr.readyState === 4) {
+        const deta = JSON.parse(this.responseText);
+        console.log(typeof deta);
+        console.log(deta.followers);
+      }
+    };
+    xhr.send();
+
+    const requestUrl = "https://api.github.com/users/princekumar7653";
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", requestUrl);
+
+    xhr.onreadystatechange = () => {
+      console.log(xhr.readyState);
+      if (xhr.readyState === 4) {
+        console.log(this.responseText);
+      }
+    };
+
+    xhr.send();
+  </script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>chai aur javascript </h1>
+    <button id="start">stat</button>
+    <button id="stop">stop</button>
+
+</body>
+<script>
+    const sayDate = function(str) {
+    console.log(str, Date.now());
+};
+
+let intervalId = null;
+
+document.getElementById("start").
+addEventListener('click', function() {
+    if (intervalId === null) { // Only start a new interval if one is not already running
+        intervalId = setInterval(sayDate, 2000, "prince");
+        console.log("Interval started");
+    }
+});
+
+document.getElementById("stop").
+addEventListener('click', function() {
+    if (intervalId !== null) { // Only stop the interval if it is running
+        clearInterval(intervalId);
+        intervalId = null;
+        console.log("Interval stopped");
+    }
+});
+
+
+    
+</script>
+</html>

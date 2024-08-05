@@ -13,13 +13,21 @@
     <script>
         function addLanguage(langName){
             const li = document.createElement('li');
-            li.innerHTML = `${'langName'}`
+            li.innerHTML = `${langName}`
             document.querySelector('.language').
             appendChild(li)
 
         }
-        addLanguage("python")
-        addLanguage("java")
+        // addLanguage("python");
+        // addLanguage("java");
+
+        const array = ["Python", "Java", "Sql", "Moongo Db", "Ract.js"]
+
+        for (let index = 0; index < array.length; index++) {
+            const element = array[index];
+            addLanguage(element)
+        }
+        
 
 
     </script>
