@@ -596,3 +596,191 @@ const squares = numbers.map(n => n * n); // [1, 4, 9]
 const evens = numbers.filter(n => n % 2 === 0); // [2]
 const sum = numbers.reduce((a, b) => a + b, 0); // 6
 Let me know if you want explanations on any specific topic!
+
+एडवांस जावास्क्रिप्ट सवाल और जवाब
+कोर कॉन्सेप्ट्स
+== और === में क्या अंतर है?
+
+== (एब्सट्रैक्ट इक्वैलिटी): वैल्यूज़ को टाइप कोर्सन के बाद तुलना करता है।
+उदाहरण:
+javascript
+Copy code
+'5' == 5; // true
+=== (स्ट्रिक्ट इक्वैलिटी): वैल्यूज़ को बिना टाइप कोर्सन के तुलना करता है।
+उदाहरण:
+javascript
+Copy code
+'5' === 5; // false
+इवेंट लूप (Event Loop) क्या है?
+
+इवेंट लूप एक मैकेनिज़म है जो कोड की एक्जीक्यूशन को मैनेज करता है, कॉलबैक फंक्शन्स को हैंडल करता है, और नॉन-ब्लॉकिंग ऑपरेशन्स करता है।
+इसमें दो मुख्य भाग होते हैं:
+कॉल स्टैक: जहाँ फंक्शन्स एक्जीक्यूट होते हैं।
+टास्क क्यू: यह असिंक्रोनस ऑपरेशन्स (जैसे setTimeout) से कॉलबैक फंक्शन्स को स्टोर करता है।
+उदाहरण:
+javascript
+Copy code
+console.log('Start');
+setTimeout(() => console.log('Callback'), 0);
+console.log('End');
+// Output: Start, End, Callback
+क्लोजर (Closure) क्या है?
+
+क्लोजर एक ऐसी फंक्शन होती है जो अपनी लेक्सिकल स्कोप को तब भी बनाए रखती है जब उसे उसकी स्कोप से बाहर एक्सेक्यूट किया जाता है।
+उदाहरण:
+javascript
+Copy code
+function outer() {
+    let count = 0;
+    return function inner() {
+        count++;
+        return count;
+    };
+}
+const counter = outer();
+console.log(counter()); // 1
+console.log(counter()); // 2
+this की भूमिका क्या है?
+
+this उस संदर्भ को दर्शाता है जिसमें फंक्शन एक्जीक्यूट हो रही है।
+ग्लोबल स्कोप में: this window या global को संदर्भित करता है।
+ऑब्जेक्ट मेथड्स में: this उस ऑब्जेक्ट को संदर्भित करता है।
+ऐरो फंक्शन्स में: this लेक्सिकल स्कोप से बाइंड होता है।
+उदाहरण:
+javascript
+Copy code
+const obj = {
+    name: 'Alice',
+    greet: function() {
+        console.log(this.name);
+    },
+};
+obj.greet(); // Alice
+var, let, और const में क्या अंतर है?
+
+var: फंक्शन-स्कोप्ड, पुनः घोषित किया जा सकता है, होइस्टेड लेकिन अनइनीशियलाइज्ड।
+let: ब्लॉक-स्कोप्ड, पुनः घोषित नहीं किया जा सकता, होइस्टेड लेकिन अनइनीशियलाइज्ड।
+const: ब्लॉक-स्कोप्ड, हमेशा इनिशियलाइज्ड होना चाहिए, फिर से असाइन नहीं किया जा सकता।
+उदाहरण:
+javascript
+Copy code
+let x = 10;
+const y = 20;
+var z = 30;
+ऑब्जेक्ट-ऑरिएंटेड प्रोग्रामिंग (OOP)
+प्रोटोटाइप्स (Prototypes) क्या होते हैं?
+
+हर जावास्क्रिप्ट ऑब्जेक्ट का एक इंटरनल लिंक होता है, जिसे उसका प्रोटोटाइप कहा जाता है।
+प्रोटोटाइप इनहेरिटेंस को सपोर्ट करता है।
+उदाहरण:
+javascript
+Copy code
+function Person(name) {
+    this.name = name;
+}
+Person.prototype.greet = function() {
+    console.log(Hello, ${this.name});
+};
+const person = new Person('John');
+person.greet(); // Hello, John
+जावास्क्रिप्ट में क्लासेस (Classes) क्या हैं?
+
+क्लासेस जावास्क्रिप्ट में ऑब्जेक्ट-ऑरिएंटेड प्रोग्रामिंग को लागू करने के लिए प्रोटोटाइप्स के ऊपर एक सिंटैक्सिक शुगर हैं।
+उदाहरण:
+javascript
+Copy code
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+    speak() {
+        console.log(${this.name} makes a sound.);
+    }
+}
+const dog = new Animal('Dog');
+dog.speak(); // Dog makes a sound.
+Object.create() और new में क्या अंतर है?
+
+Object.create(): यह एक नया ऑब्जेक्ट बनाता है और उसे निर्दिष्ट प्रोटोटाइप से लिंक करता है।
+new कीवर्ड: यह एक ऑब्जेक्ट बनाता है और उसे कंस्ट्रक्टर फंक्शन के प्रोटोटाइप से लिंक करता है।
+उदाहरण:
+javascript
+Copy code
+const proto = { greet: () => 'Hello' };
+const obj1 = Object.create(proto);
+function Constructor() {}
+const obj2 = new Constructor();
+असिंक्रोनस प्रोग्रामिंग
+setTimeout और setInterval में क्या अंतर है?
+
+setTimeout: एक निश्चित देरी के बाद एक फंक्शन को एक बार चलाता है।
+setInterval: एक निश्चित अंतराल पर फंक्शन को बार-बार चलाता है।
+उदाहरण:
+javascript
+Copy code
+setTimeout(() => console.log('Timeout'), 1000);
+setInterval(() => console.log('Interval'), 1000);
+प्रॉमिस (Promises) क्या हैं और ये कैसे काम करते हैं?
+
+प्रॉमिस असिंक्रोनस ऑपरेशन्स को हैंडल करने के लिए उपयोग किए जाते हैं।
+उनके तीन राज्य होते हैं: Pending, Fulfilled, Rejected।
+उदाहरण:
+javascript
+Copy code
+const promise = new Promise((resolve, reject) => {
+    const success = true;
+    if (success) resolve('Success');
+    else reject('Error');
+});
+promise
+    .then(result => console.log(result))
+    .catch(error => console.log(error));
+async/await क्या है और इसे कैसे उपयोग करें?
+
+async/await प्रॉमिसेस को हैंडल करने के लिए सिंटैक्सिक शुगर है।
+उदाहरण:
+javascript
+Copy code
+async function fetchData() {
+    const response = await fetch('https://api.example.com/data');
+    const data = await response.json();
+    console.log(data);
+}
+fetchData();
+मॉडर्न जावास्क्रिप्ट फीचर्स
+डेस्ट्रक्चरिंग (Destructuring) क्या है?
+
+डेस्ट्रक्चरिंग का उपयोग ऐरे या ऑब्जेक्ट्स से वैल्यूज़ को अनपैक करने के लिए किया जाता है।
+उदाहरण:
+javascript
+Copy code
+const [a, b] = [1, 2];
+const { name, age } = { name: 'Alice', age: 25 };
+console.log(a, b, name, age); // 1 2 Alice 25
+ऐरो फंक्शन्स (Arrow Functions) क्या हैं और ये सामान्य फंक्शन्स से कैसे अलग हैं?
+
+ऐरो फंक्शन्स फंक्शन एक्सप्रेशंस के लिए संक्षिप्त सिंटैक्स हैं।
+इनमें अपना this नहीं होता।
+उदाहरण:
+javascript
+Copy code
+const greet = () => 'Hello';
+स्प्रेड ऑपरेटर (Spread Operator) क्या है और इसका उपयोग कैसे करें?
+
+स्प्रेड ऑपरेटर (...) का उपयोग ऐरे/ऑब्जेक्ट्स को कॉपी करने या जोड़ने के लिए किया जाता है।
+उदाहरण:
+javascript
+Copy code
+const arr1 = [1, 2];
+const arr2 = [...arr1, 3, 4]; // [1, 2, 3, 4]
+map(), filter() और reduce() में क्या अंतर है?
+
+map(): ऐरे के हर एलिमेंट को ट्रांसफॉर्म करता है।
+filter(): एक कंडीशन के आधार पर ऐरे के एलिमेंट्स को फिल्टर करता है।
+reduce(): ऐरे को एक सिंगल वैल्यू में संकुचित करता है।
+उदाहरण:
+
+
+
+
+
