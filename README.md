@@ -410,6 +410,7 @@ Example:
 javascript
 Copy code
 '5' === 5; // false
+
 What is the Event Loop in JavaScript?
 
 The event loop is a mechanism that manages the execution of code, handles callbacks, and performs non-blocking operations.
@@ -440,6 +441,7 @@ function outer() {
 const counter = outer();
 console.log(counter()); // 1
 console.log(counter()); // 2
+
 Explain this keyword in JavaScript.
 
 this refers to the context in which a function is executed.
@@ -583,6 +585,7 @@ javascript
 Copy code
 const arr1 = [1, 2];
 const arr2 = [...arr1, 3, 4]; // [1, 2, 3, 4]
+
 What is the difference between map(), filter(), and reduce()?
 
 map(): Transforms each element in an array.
