@@ -20,11 +20,13 @@ author- prince kumar
 var: फ़ंक्शन-स्कोप में काम करता है, दोबारा डिक्लेयर किया जा सकता है।
 let: ब्लॉक-स्कोप में काम करता है, दोबारा डिक्लेयर नहीं किया जा सकता।
 const: ब्लॉक-स्कोप में काम करता है और इसे रीअसाइन नहीं किया जा सकता।
+
 4. == और === में क्या अंतर है?
 उत्तर:
 
 ==: यह टाइप कन्वर्जन (Type Conversion) के बाद समानता की जांच करता है।
 ===: यह बिना टाइप कन्वर्जन के समानता की जांच करता है।
+
 5. जावास्क्रिप्ट में फ़ंक्शन्स क्या हैं?
 उत्तर:
 फ़ंक्शन कोड का एक ब्लॉक होता है जो कोई विशिष्ट कार्य करता है।
@@ -35,6 +37,7 @@ Copy code
 function जोड़ें(a, b) {
   return a + b;
 }
+
 6. कॉलबैक फ़ंक्शन (Callback Function) क्या होता है?
 उत्तर:
 कॉलबैक एक ऐसा फ़ंक्शन है जिसे दूसरे फ़ंक्शन के तर्क (argument) के रूप में पास किया जाता है और बाद में इसे निष्पादित किया जाता है।
@@ -46,11 +49,13 @@ function अभिवादन(नाम, callback) {
   callback(नाम);
 }
 अभिवादन("अलिस", (नाम) => console.log("नमस्ते " + नाम));
+
 7. undefined और null में क्या अंतर है?
 उत्तर:
 
 undefined: जब किसी वेरिएबल को डिक्लेयर किया जाता है लेकिन उसे वैल्यू नहीं दी जाती।
 null: एक जानबूझकर वैल्यू की अनुपस्थिति को दर्शाता है।
+
 8. जावास्क्रिप्ट में क्लोजर (Closures) क्या होते हैं?
 उत्तर:
 क्लोजर एक ऐसा फ़ंक्शन है जो बाहरी फ़ंक्शन के वेरिएबल्स तक पहुंच सकता है, भले ही बाहरी फ़ंक्शन समाप्त हो गया हो।
@@ -67,6 +72,7 @@ function बाहरी() {
 }
 const बढ़ाएं = बाहरी();
 console.log(बढ़ाएं()); // 1
+
 9. होस्टिंग (Hoisting) क्या है?
 उत्तर:
 होस्टिंग वह प्रक्रिया है जिसमें जावास्क्रिप्ट वेरिएबल और फ़ंक्शन डिक्लेरेशन को स्कोप के शीर्ष पर ले जाता है।
@@ -80,6 +86,7 @@ javascript
 Copy code
 const नाम = "अलिस";
 console.log(नमस्ते, ${नाम}!);
+
 11. जावास्क्रिप्ट ऑब्जेक्ट्स क्या हैं?
 उत्तर:
 ऑब्जेक्ट्स कुंजी-मूल्य (Key-Value) के जोड़े होते हैं।
@@ -96,6 +103,7 @@ const व्यक्ति = { नाम: "अलिस", उम्र: 25 };
 javascript
 Copy code
 const फल = ["सेब", "केला", "चेरी"];
+
 13. एरो फ़ंक्शन (Arrow Function) क्या है?
 उत्तर:
 एरो फ़ंक्शन जावास्क्रिप्ट में फ़ंक्शन लिखने का एक संक्षिप्त तरीका है।
@@ -104,11 +112,13 @@ const फल = ["सेब", "केला", "चेरी"];
 javascript
 Copy code
 const जोड़ें = (a, b) => a + b;
+
 14. map() और forEach() में क्या अंतर है?
 उत्तर:
 
 map(): एक नया एरे रिटर्न करता है।
 forEach(): केवल एरे के हर आइटम पर ऑपरेशन करता है।
+
 15. typeof का उपयोग क्या है?
 उत्तर:
 typeof किसी वेरिएबल का प्रकार (Type) जांचने के लिए उपयोग होता है।
@@ -117,6 +127,7 @@ typeof किसी वेरिएबल का प्रकार (Type) ज�
 javascript
 Copy code
 console.log(typeof "नमस्ते"); // string
+
 16. जावास्क्रिप्ट प्रॉमिस (Promise) क्या है?
 उत्तर:
 प्रॉमिस असिंक्रोनस ऑपरेशन्स को हैंडल करने के लिए उपयोग होता है।
@@ -187,11 +198,13 @@ Answer:
 var: Function-scoped, hoisted with undefined value.
 let: Block-scoped, cannot be redeclared.
 const: Block-scoped, cannot be reassigned or redeclared.
+
 4. Explain the difference between == and ===.
 Answer:
 
 == checks equality after type conversion.
 === checks strict equality without type conversion.
+
 5. What are JavaScript functions?
 Answer:
 Functions are blocks of code designed to perform a particular task. They can take parameters and return values.
@@ -213,6 +226,7 @@ function greet(name, callback) {
   callback(name);
 }
 greet("Alice", (name) => console.log("Hello " + name));
+
 7. What is the difference between undefined and null?
 Answer:
 
@@ -284,6 +298,7 @@ Example:
 javascript
 Copy code
 console.log(typeof "Hello"); // string
+
 16. What are JavaScript promises?
 Answer:
 Promises handle asynchronous operations. They can be in one of three states: Pending, Resolved, or Rejected.
@@ -380,3 +395,204 @@ Answer:
 Synchronous: Code executes line by line.
 Asynchronous: Code doesn't block further execution while waiting for a task to complete.
 Would you like detailed explanations or examples for any of these?
+
+##### advance question #########################
+
+What is the difference between == and === in JavaScript?
+
+== (Abstract Equality): Compares values after type coercion.
+Example:
+javascript
+Copy code
+'5' == 5; // true
+=== (Strict Equality): Compares values without type coercion.
+Example:
+javascript
+Copy code
+'5' === 5; // false
+What is the Event Loop in JavaScript?
+
+The event loop is a mechanism that manages the execution of code, handles callbacks, and performs non-blocking operations.
+Tasks are divided into:
+Call Stack: Where functions are executed.
+Task Queue: Stores callback functions from asynchronous operations (e.g., setTimeout).
+Example:
+javascript
+Copy code
+console.log('Start');
+setTimeout(() => console.log('Callback'), 0);
+console.log('End');
+// Output: Start, End, Callback
+
+What is a Closure?
+
+A closure is a function that retains access to its lexical scope even when executed outside its scope.
+Example:
+javascript
+Copy code
+function outer() {
+    let count = 0;
+    return function inner() {
+        count++;
+        return count;
+    };
+}
+const counter = outer();
+console.log(counter()); // 1
+console.log(counter()); // 2
+Explain this keyword in JavaScript.
+
+this refers to the context in which a function is executed.
+In global scope: this refers to window or global object.
+In object methods: this refers to the object.
+In arrow functions: this is lexically bound to its enclosing scope.
+Example:
+javascript
+Copy code
+const obj = {
+    name: 'Alice',
+    greet: function() {
+        console.log(this.name);
+    },
+};
+obj.greet(); // Alice
+
+What is the difference between var, let, and const?
+
+var: Function-scoped, can be re-declared, hoisted but uninitialized.
+let: Block-scoped, cannot be re-declared, hoisted but not initialized.
+const: Block-scoped, must be initialized, cannot be reassigned.
+Example:
+javascript
+Copy code
+let x = 10;
+const y = 20;
+var z = 30;
+Object-Oriented Programming
+
+What are Prototypes in JavaScript?
+
+Every object in JavaScript has an internal link to another object called its prototype.
+Prototype allows inheritance of methods and properties.
+Example:
+javascript
+Copy code
+function Person(name) {
+    this.name = name;
+}
+Person.prototype.greet = function() {
+    console.log(Hello, ${this.name});
+};
+const person = new Person('John');
+person.greet(); // Hello, John
+
+What are Classes in JavaScript?
+
+Classes are syntactic sugar over prototypes to implement object-oriented programming.
+Example:
+javascript
+Copy code
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+    speak() {
+        console.log(${this.name} makes a sound.);
+    }
+}
+const dog = new Animal('Dog');
+dog.speak(); // Dog makes a sound.
+
+What is the difference between Object.create() and new keyword?
+
+Object.create(): Creates a new object with the specified prototype.
+new keyword: Creates an object and links it to the prototype of the constructor function.
+Example:
+javascript
+Copy code
+const proto = { greet: () => 'Hello' };
+const obj1 = Object.create(proto);
+function Constructor() {}
+const obj2 = new Constructor();
+Asynchronous Programming
+
+What is the difference between setTimeout and setInterval?
+
+setTimeout: Executes a function after a specified delay.
+setInterval: Repeatedly executes a function at specified intervals.
+Example:
+javascript
+Copy code
+setTimeout(() => console.log('Timeout'), 1000);
+setInterval(() => console.log('Interval'), 1000);
+
+What are Promises, and how do they work?
+
+Promises are used to handle asynchronous operations in JavaScript.
+They have three states: Pending, Fulfilled, Rejected.
+Example:
+javascript
+Copy code
+const promise = new Promise((resolve, reject) => {
+    const success = true;
+    if (success) resolve('Success');
+    else reject('Error');
+});
+promise
+    .then(result => console.log(result))
+    .catch(error => console.log(error));
+
+What is async/await, and how is it used?
+
+async/await is syntactic sugar for handling Promises.
+Example:
+javascript
+Copy code
+async function fetchData() {
+    const response = await fetch('https://api.example.com/data');
+    const data = await response.json();
+    console.log(data);
+}
+fetchData();
+Modern JavaScript Features
+
+What is Destructuring in JavaScript?
+
+Destructuring allows unpacking values from arrays or properties from objects.
+Example:
+javascript
+Copy code
+const [a, b] = [1, 2];
+const { name, age } = { name: 'Alice', age: 25 };
+console.log(a, b, name, age); // 1 2 Alice 25
+
+What are Arrow Functions, and how do they differ from regular functions?
+
+Arrow functions are a concise syntax for function expressions.
+They do not have their own this.
+Example:
+javascript
+Copy code
+const greet = () => 'Hello';
+
+What is the spread operator, and how is it used?
+
+The spread operator (...) allows copying or combining arrays/objects.
+Example:
+javascript
+Copy code
+const arr1 = [1, 2];
+const arr2 = [...arr1, 3, 4]; // [1, 2, 3, 4]
+What is the difference between map(), filter(), and reduce()?
+
+map(): Transforms each element in an array.
+filter(): Filters elements based on a condition.
+reduce(): Reduces an array to a single value.
+Example:
+javascript
+Copy code
+const numbers = [1, 2, 3];
+const squares = numbers.map(n => n * n); // [1, 4, 9]
+const evens = numbers.filter(n => n % 2 === 0); // [2]
+const sum = numbers.reduce((a, b) => a + b, 0); // 6
+Let me know if you want explanations on any specific topic!
