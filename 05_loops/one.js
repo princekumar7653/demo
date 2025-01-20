@@ -17,22 +17,34 @@ for (let i = 1; i <= 10; i++) {
     
 }
 
-let myArray = ["flash", "batman", "superman"]
+// let myArray = ["flash", "batman", "superman"]
 
-for (let i = 0; i < myArray .length; i++) {
-    const element = myArray [i];
-    //console.log(element);
+// for (let i = 0; i < myArray .length; i++) {
+//     const element = myArray [i];
+//     console.log(element);
     
-}
+// }
 
 // break and continue
 
-for (let i = 1; i <= 20; i++) {
-   if (i == 5){
-    console.log("detected");
-    //break
-    continue
-   }
-   console.log(`value of i is ${i}`);
+// for (let i = 1; i <= 20; i++) {
+//    if (i == 5){
+//     console.log("detected");
+//     //break
+//     continue
+//    }
+//    console.log(`value of i is ${i}`);
+    
+// }
+
+//######################### itiration ######################
+
+
+let myArray2 =[1, 2, 3, 4, ]
+console.log(myArray2);
+
+for (let i = 0; i < myArray2.length; i++) {
+    const element = myArray2[i];
+    // console.log("element")
     
 }
