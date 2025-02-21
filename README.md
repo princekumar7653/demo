@@ -1,4 +1,4 @@
-# demo
+  # demo
 this is the first repository 
 <br>
 author- prince kumar
@@ -783,6 +783,194 @@ map(): ऐरे के हर एलिमेंट को ट्रांस�
 filter(): एक कंडीशन के आधार पर ऐरे के एलिमेंट्स को फिल्टर करता है।
 reduce(): ऐरे को एक सिंगल वैल्यू में संकुचित करता है।
 उदाहरण:
+
+
+Advanced Questions:
+
+
+What is Semantic HTML, and why is it important?
+
+Semantic HTML: Uses meaningful tags (like <header>, <footer>, <article>, <section>) to define the structure of the content.
+Importance:
+Improves accessibility.
+Helps search engines understand the page structure.
+Enhances maintainability of the code.
+Example:
+html
+Copy code
+<article>
+    <header>Introduction</header>
+    <p>This is semantic HTML.</p>
+</article>
+
+What is the difference between <section> and <div>?
+
+<section>: Defines a thematic grouping of content with a heading. It has semantic meaning.
+<div>: A generic container with no inherent meaning.
+
+What are custom data attributes in HTML?
+
+Data attributes start with data- and allow embedding custom information into HTML elements.
+Example:
+html
+Copy code
+<button data-user-id="123">Click Me</button>
+
+You can access these attributes using JavaScript:
+javascript
+Copy code
+const userId = document.querySelector('button').dataset.userId;
+console.log(userId); // Output: 123
+
+What is the difference between defer and async attributes in the <script> tag?
+
+defer: Script execution is delayed until the HTML parsing is complete. Scripts are executed in order.
+async: Script is executed as soon as it is downloaded, without waiting for HTML parsing to complete. Scripts may execute out of order.
+Example:
+html
+Copy code
+<script src="script.js" defer></script>
+<script src="script.js" async></script>
+
+What are Web Components?
+
+Web Components are reusable custom elements created using:
+
+Custom Elements: Define new HTML tags.
+Shadow DOM: Encapsulates styles and DOM elements.
+HTML Templates: Create reusable HTML structures.
+Example:
+html
+Copy code
+<template id="my-template">
+    <style>
+        p { color: red; }
+    </style>
+    <p>This is a Web Component</p>
+</template>
+
+What is the <template> element in HTML?
+
+The <template> element is used to define reusable HTML fragments that are not rendered immediately.
+Example:
+html
+Copy code
+<template id="greeting">
+    <p>Hello, World!</p>
+</template>
+<script>
+    const template = document.getElementById('greeting');
+    document.body.appendChild(template.content.cloneNode(true));
+</script>
+
+What is the purpose of the <picture> element?
+
+The <picture> element allows specifying multiple image sources for responsive design.
+Example:
+html
+Copy code
+<picture>
+    <source media="(max-width: 600px)" srcset="small.jpg">
+    <source media="(max-width: 1200px)" srcset="medium.jpg">
+    <img src="default.jpg" alt="Responsive Image">
+</picture>
+
+What is the difference between localStorage and sessionStorage?
+
+localStorage: Data persists even after the browser is closed.
+sessionStorage: Data is cleared when the session (tab or window) is closed.
+
+What is the purpose of the contenteditable attribute?
+
+It makes an element editable directly in the browser.
+Example:
+html
+Copy code
+<div contenteditable="true">Edit this text</div>
+
+What are HTML5 Form Validation attributes?
+
+HTML5 provides attributes for client-side validation:
+
+required: Ensures the field is not empty.
+pattern: Validates input against a regex pattern.
+min and max: For numeric inputs.
+maxlength: Restricts character count.
+Example:
+html
+Copy code
+<input type="text" required pattern="[A-Za-z]+" maxlength="10">
+Performance and Optimization:
+
+What is Lazy Loading in HTML?
+
+Lazy Loading delays the loading of images or iframes until they are visible in the viewport.
+Example:
+html
+Copy code
+<img src="image.jpg" loading="lazy" alt="Lazy Loaded Image">
+
+What is the purpose of the <meta> tag?
+
+Provides metadata about the HTML document (e.g., viewport settings, charset).
+Example:
+html
+Copy code
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+
+What are Microdata and ARIA roles in HTML?
+
+Microdata: Provides semantic meaning to content for search engines.
+ARIA Roles: Enhance accessibility for users with disabilities.
+Example:
+html
+Copy code
+<div role="button" tabindex="0">Accessible Button</div>
+
+What is the <iframe> tag, and how can you secure it?
+
+The <iframe> tag embeds external content into a webpage.
+Security Measures:
+Use the sandbox attribute to restrict actions.
+Use allow attribute for specific permissions.
+Example:
+html
+Copy code
+<iframe src="example.com" sandbox="allow-scripts"></iframe>
+
+What is the difference between <b> and <strong>, <i> and <em>?
+
+<b> vs <strong>: <b> represents bold text without extra importance, while <strong> indicates text with strong importance.
+<i> vs <em>: <i> represents italic text without emphasis, while <em> indicates text with emphasis.
+Best Practices:
+
+What is Progressive Enhancement in HTML?
+
+Start with a basic, functional version of the page and add advanced features for modern browsers.
+What is the purpose of the rel="noopener noreferrer" attribute in anchor tags?
+
+Prevents security risks (e.g., phishing) when opening links in a new tab.
+Example:
+html
+Copy code
+<a href="https://example.com" target="_blank" rel="noopener noreferrer">Visit</a>
+
+How can you improve HTML performance?
+
+Use minified HTML.
+Use lazy loading for images.
+Reduce DOM size.
+Use CDN-hosted libraries.
+
+What is Shadow DOM, and why is it used?
+
+Shadow DOM is part of Web Components and encapsulates DOM and styles to avoid conflicts.
+What is the difference between <script> at the head and body?
+
+Scripts in <head> block HTML rendering until they are loaded.
+Scripts in <body> load after the content is rendered, improving page load speed.
+Let me know if you’d like more information on any specific question!
 
 
 

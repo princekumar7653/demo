@@ -15,3 +15,5 @@ const programming = ["js", "rb", "py", "java", "cpp"]
 for (const key in programming){
     console.log(`${key} shortcut is for ${programming[key]}`);
 }
+
+

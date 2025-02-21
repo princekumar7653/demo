@@ -15,6 +15,20 @@ while (arr < myArray.length){
 let score = 1
 
 do{
-    console.log(`score is: ${score}`);
+    // console.log(`score is: ${score}`);
     score++
 }while (score <= 10);
+
+
+let index = 0;
+while(index < 10){
+console.log(`value is ${index}`);
+index++
+};
+
+const array = ["bandi", "gandi", "sandi"]
+arr = 0
+ while(arr < array.length){
+console.log(`hii ${array[arr]}`);
+arr++
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>bulb on off</h1>
+    <div></div>
+    <button>click me!</button>
+  </body>
+  <script>
+    const bulb = document.querySelector("div");
+    const btn = document.querySelector("button");
+    let isboollian = false;
+    btn.addEventListener('click', function(){
+      console.log("hi");
+
+      if (isboollian == false) {
+        bulb.style.backgroundColor = "yellow";
+        isboollian = true;
+      } else {
+        bulb.style.backgroundColor = "white";
+        isboollian = false;
+      }
+    });
+  </script>
+</html>
+

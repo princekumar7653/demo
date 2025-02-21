@@ -38,5 +38,5 @@ const shopingCart = [
 
 const totalShopingCart = shopingCart.reduce( (accu, item) => accu + item.price, 0 )
 
-console.log(totalShopingCart);
+// console.log(totalShopingCart);
 

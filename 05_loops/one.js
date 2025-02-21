@@ -41,10 +41,23 @@ for (let i = 1; i <= 10; i++) {
 
 
 let myArray2 =[1, 2, 3, 4, ]
-console.log(myArray2);
+// console.log(myArray2);
 
 for (let i = 0; i < myArray2.length; i++) {
     const element = myArray2[i];
     // console.log("element")
     
+}
+
+
+const myArray = [1,2,2,2,2,2,2,2,222,2222,23]
+for(let i = 0; i < myArray.length; i++){
+const element = myArray[i];
+console.log(element);
+}
+
+const myarray = [23,45,6777];
+for(let j = 0; j < myarray.length; j++){
+const array = myarray[j];
+console.log(array);
 }
